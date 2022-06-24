@@ -68,10 +68,10 @@ def get_change(response):
         return change
 change_result = get_change(result)
 
-def get_rerun(response):
-    new_destination_choice = random.choice(destinations)
+def get_new_destination(response):
     cont_loop = True
     while cont_loop == True:
+        new_destination_choice = random.choice(destinations)
         if change_result == '1':
             print(f'How about {new_destination_choice} as your destination? ')
             decision = input('yes or no? ')
@@ -79,7 +79,9 @@ def get_rerun(response):
             cont_loop = False
         else:
             cont_loop = True
-get_rerun(change_result)
+get_new_destination(change_result)
+
+
 
 
 
