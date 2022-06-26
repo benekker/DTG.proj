@@ -28,25 +28,26 @@ def get_destination():
     destination_choice = random.choice(destinations)
     print(f'We have chosen {destination_choice} as your destination.')
     return destination_choice
-get_destination()
+dest = get_destination()
 
 def get_restaurant():
     restaraunt_choice = random.choice(restaurants)
     print(f'We have chosen {restaraunt_choice} as your restaurant.')
     return restaraunt_choice
-get_restaurant()
+food = get_restaurant()
 
 def get_transportation():
     transportation_choice = random.choice(transportation)
     print(f'We have chosen {transportation_choice} as your method of transport.')
     return transportation_choice
-get_transportation()
+trans = get_transportation()
 
 def get_entertainment():
     entertainment_choice = random.choice(entertainment)
     print(f'And, we have chosen {entertainment_choice} as your entertainment option!')
     return entertainment_choice
-get_entertainment()
+fun = get_entertainment()
+
 
 def get_user_opinion():
     print('Are you happy with all of your results?')
@@ -68,66 +69,8 @@ def get_change(response):
         return change
 change_result = get_change(result)
 
-def get_new_destination(response):
-    cont_loop = True
-    while cont_loop == True:
-        new_destination_choice = random.choice(destinations)
-        if change_result == '1':
-            print(f'How about {new_destination_choice} as your destination? ')
-            decision = input('yes or no? ')
-        if decision == 'yes':
-            cont_loop = False
-        else:
-            cont_loop = True
-get_new_destination(change_result)
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+user_input = input(f'{dest} {food} {trans} {fun}')
+if user_input == '1':
+    dest = get_destination()
 
 
