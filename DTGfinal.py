@@ -1,5 +1,6 @@
 print('Thank you for choosing Day Trip Generator! We hope to create a trip you are happy with!')
 
+# List's of trip options pulled later by functions
 import random 
 destinations = ['Humboldt Park', 'South Shore Beach', 'The Historic 3rd Ward', 'The Upper East Side']
 
@@ -9,6 +10,7 @@ transportation = ['biking', 'taking the bus', ' calling an Uber', 'renting a lim
 
 entertainment = ['See a movie at the Avalon Theater', 'Watch the Bucks game at Fiserv Forum', 'Attend a concert at the Summerfest Grounds', 'Tour the Art Museum']
 
+# Function used to select and reselect destination from destinations list
 def get_destination():
     destination_choice = random.choice(destinations)
     print(f'We have chosen {destination_choice} as your destination. Does this sound good to you? ')
@@ -23,6 +25,7 @@ def get_destination():
     return destination_choice
 dest = get_destination()
 
+# Function used to select and reselect restaurant from restaurants list
 def get_restaurant():
     restaurant_choice = random.choice(restaurants)
     print(f'We have chosen {restaurant_choice} as your restaurant. Does this sound good to you? ')
@@ -37,6 +40,7 @@ def get_restaurant():
     return restaurant_choice
 food = get_restaurant()
 
+ # Function used to select and reselect transportation from transportations list
 def get_transportation():
     transportation_choice = random.choice(transportation)
     print(f'We have chosen {transportation_choice} as your method of transport. Does this sound good to you? ')
@@ -51,6 +55,7 @@ def get_transportation():
     return transportation_choice
 trans = get_transportation()
 
+ # Function used to select and reselect entertainment from entertainment list
 def get_entertainment():
     entertainment_choice = random.choice(entertainment)
     print(f'And, we have chosen {entertainment_choice} as your entertainment option! Does this sound good to you? ')
@@ -65,6 +70,7 @@ def get_entertainment():
     return entertainment_choice
 fun = get_entertainment()
 
+# Function used to get trip confirmation
 def get_confirmation():
     print('Would you like to confirm your trip? ')
     user_input = input('yes or no? ')
